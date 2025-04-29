@@ -26,7 +26,7 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 ## **  Database Design** 
 
-*** Key Entities ***
+**Key Entities**
 - **Users**:
     - user registration, authentication, and profile management.
 - **Porperties**:
@@ -164,20 +164,26 @@ With manual steps minimized, features and fixes can reach users more quickly and
 **Source Control**:
 - Github, Gitlab, Bitbucket.
 <br>
+
 **CI orchestration:**
 - Github Actions, Gitlab CI/CD, Jenkins, CircleCI
 <br>
+
 **Containerization**:
 - Docker, Podman
 <br>
+
 **Artifact Registry:**
 - Docker Hub, Github, Packages, AWS ECR
 <br>
+
 **Infrastructure as Code:**
 - Terraform, Pulumi
 <br>
+
 **Deployment:**
 - Kubernetes, Helm, AWS CodeDeploy, Ansible
 <br>
+
 **Monitoring & Rollback:**
 Prometheus, Grafana, Sentry, Rollbar
