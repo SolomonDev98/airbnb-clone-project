@@ -55,28 +55,34 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 **API security** refers to the practices and technologies used to protect the backend services of a web application from malicious use or inintended access. In the context of this project, which involves sensitive user data, payments, listings and booking functionality, API security is crucial.
 
+<br>
+
 **Key Security Measures**
 ### **Authentication**
 **What it is**: Verifying the identity of a user.
+<br>
 **How to implement**:
     - use **JWT (JSON Web Tokens) or OAuth 2.0.**
     - secure login endpoints with HTTPS.
     - Hash passwords using strong algorithms like bcrypt.
+<br>
 **Why it's crucial**:
  - Ensures that only real users can access or modify their own data (e.g bookings, profiles).
 
 ### **Authorization**
 **What it is: Ensuring users can only access resources they're allowed to.
+<br>
 **How to implement:**
  - Role-based access control (e.g., admin vs guest vs host).
  - Restrict endpoints based on user roles.
  - check ownership before allowing update/delete of listings or bookings.
-
+<br>
 **Why it's crucial:**
  - Prevent users from modifying other people's bookings, listings, or payment info.
 
 ### **Rate Limiting & Throttling**
 **What it is:** Limiting the number of requests a user/IP can make over time.
+<br>
 **How to implement**:
  - Use tools like Nginx, API Gateway, or libraries like express-rate-limit(Node.js).
  - Track request count per IP or token.
@@ -84,48 +90,53 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 
 ### **Input Validation & Sanitization**
 **What it is:** Ensuring incoming data is clean and safe.
+<br>
 **How to Implement:**
  - Use libraries to validate user input.
  - Escape special characters to prevent SQL injection or XSS.
-
+<br>
  **Why it's crucial**:
  - Prevent attackers from injecting malicious code or accessing the database directly.
 
  ### **HTTPS & Secure Headers**
  **What it is:** Encrypting communication and securing responses.
+ <br>
  **How to implement:**
  - Use SSL/TLS certificates.
  - Add security headers (e.g., Content-Security-Policy, X-Content-Type-Options, Strict-Transport-Security).
-
+<br>
 **Why it is crucial:**
  - Protect data in transit from man-in-the-middle(MITM) attacks.
 
 
 ### **Logging  and Monitoring**
 **What it is:** Keeping track of user activity and anaomalies.
+<br>
 **How to implement:**
  - Store accee logs securely.
  - Use tools like ELK stack or Sentry for Monitoring.
-
+<br>
  **Why it's crucial:**
  - Helps detect suspicious behavior, audit access, and respond to breaches quickly.
 
  ### **Secure Payments**
  **What it is**: Ensuring financial transactions are safe.
+ <br>
  **How to implement:**
  - Use third-party payment processors like Stripe or PayPal.
  - Never store raw credit card info.
  - Ensure PCI compliance.
-
+<br>
  **Why it's crucial:**
  - Payment fraud can lead to financial loss and legal consequences.
 
  ### **Data Encryption**
  **What it is**: Encrypting sensitive user information.
- **How to implement**:
+ <br>
+ **How to implement:**
  - Use encryption libraries or database-level encryption for sensitive fields (e.g., PII, contact info).
  - store secrets securely (e.g., environment variables or secret managers).
-
+<br>
  **Why it's crucial:**
  - Ensures that even if data is leaked, it's unreadeable without keys.
 
@@ -140,27 +151,33 @@ The Airbnb Clone Project is a comprehensive, real-world application designed to 
 **Why CI/CD Matters**:
 - **Faster Feedbacks & Higher Quality:**
 Automated tests and builds run on every commit, so regressions or bugs are caught immediately rather than after manual QA.
-- **Reduced Risk**
+- **Reduced Risk:**
 Small, incremental releases are easier to troubleshoot and roll back if something goes wrong.
-- **Consistent Envronments**
+- **Consistent Envronments:**
 Docker containers or infrastructure-as-code ensure that "it works on my machine" doesn't become "it breaks in production."
-- **Improved Collaboration**
+- **Improved Collaboration:**
 A shared pipeline enforces coding standards, run linting/static analysis, and documents deployment flows keeping the whole team in sync.
-- **Faster Time to Market**
+- **Faster Time to Market:**
 With manual steps minimized, features and fixes can reach users more quickly and with more confidence.
 
 ## **Common CI/CD Tools**
 **Source Control**:
 - Github, Gitlab, Bitbucket.
+<br>
 **CI orchestration:**
 - Github Actions, Gitlab CI/CD, Jenkins, CircleCI
+<br>
 **Containerization**:
 - Docker, Podman
+<br>
 **Artifact Registry:**
 - Docker Hub, Github, Packages, AWS ECR
+<br>
 **Infrastructure as Code:**
 - Terraform, Pulumi
+<br>
 **Deployment:**
 - Kubernetes, Helm, AWS CodeDeploy, Ansible
+<br>
 **Monitoring & Rollback:**
 Prometheus, Grafana, Sentry, Rollbar
